@@ -1,8 +1,8 @@
 
 
 
+const bcrypt = require('bcryptjs');
 
-const bcrypt = require("bcrypt");
 const accountModel = require("../models/account_model");
 const nodemailer = require("nodemailer");
 

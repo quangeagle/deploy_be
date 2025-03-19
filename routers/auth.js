@@ -2,7 +2,7 @@ const express = require("express");
 const AdminModel = require("../models/Admin");
 const account = require("../models/account_model");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcryptjs');
 const session = require("express-session"); // Cài đặt session
 require('dotenv').config();
 
