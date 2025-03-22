@@ -4,7 +4,7 @@ const Admin = require("./models/Admin.js");
 
 // Kết nối tới MongoDB
 mongoose
-  .connect("mongodb://localhost:27017/Sieuthi", {
+  .connect("mongodb+srv://quangeagle:Kidoking258@emart.w5an1.mongodb.net/?retryWrites=true&w=majority&appName=Emart", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
