@@ -24,7 +24,7 @@ const server = http.createServer(app); // Tạo server http
 const io = socketIo(server, {
   transports: ['websocket', 'polling'],
   cors: {
-    origin:"http://localhost:5173", // Cập nhật URL frontend của bạn
+    origin:"https://deploy-vite-mu1djm43h-quangeagles-projects.vercel.app", // Cập nhật URL frontend của bạn
     methods: ["GET", "POST"],
   }
 });
@@ -54,7 +54,7 @@ app.use((req, res, next) => {
 // Xử lý yêu cầu thanh toán ZaloPay
 app.post("/payment", async (req, res) => {
   const embed_data = {
-      redirecturl: "http://localhost:5173/Order_suc"
+      redirecturl: "https://deploy-vite-mu1djm43h-quangeagles-projects.vercel.app/Order_suc"
   };
   const { amount } = req.body; 
   const items = [{}];
@@ -69,7 +69,7 @@ app.post("/payment", async (req, res) => {
       amount: amount, 
       description: `Lazada - Payment for the order #${transID}`,
       bank_code: "",
-      callback_url: 'https://9317-27-64-54-208.ngrok-free.app/callback', // Callback khi thanh toán xong
+      callback_url: 'https://deploy-be-0hfo.onrender.com/callback', // Callback khi thanh toán xong
   };
 
   const data = config.app_id + "|" + order.app_trans_id + "|" + order.app_user + "|" + order.amount + "|" + order.app_time + "|" + order.embed_data + "|" + order.item;
