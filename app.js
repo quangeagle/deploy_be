@@ -24,14 +24,14 @@ const server = http.createServer(app); // Tạo server http
 const io = socketIo(server, {
   transports: ['websocket', 'polling'],
   cors: {
-    origin:"https://deploy-vite-mu1djm43h-quangeagles-projects.vercel.app", // Cập nhật URL frontend của bạn
+    origin:"https://deploy-vite-eta.vercel.app", // Cập nhật URL frontend của bạn
     methods: ["GET", "POST"],
   }
 });
 
 // Middleware
 const allowedOrigins = [
-  "https://deploy-vite-mu1djm43h-quangeagles-projects.vercel.app",
+  "https://deploy-vite-eta.vercel.app",
   "http://localhost:5173"
 ];
 
@@ -56,7 +56,7 @@ app.use(bodyParser.json());
 // Xử lý yêu cầu thanh toán ZaloPay
 app.post("/payment", async (req, res) => {
   const embed_data = {
-      redirecturl: "https://deploy-vite-mu1djm43h-quangeagles-projects.vercel.app/Order_suc"
+      redirecturl: "https://deploy-vite-eta.vercel.app/Order_suc"
   };
   const { amount } = req.body; 
   const items = [{}];
