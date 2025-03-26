@@ -9,7 +9,7 @@ const orderRouter = require("./order_router");
 const authRouter = require("./auth");
 const promotionRouter = require("./KhuyenMai");
 const khoRouter = require("./kho_router");
-
+const wishlistRoutes = require("./wishlist_routes");
 module.exports = (app) => {
   app.use("/api/categories", categoryRouter);
   app.use("/api/NCC", NCCRouter);
@@ -21,4 +21,5 @@ module.exports = (app) => {
   app.use("/api/auth", authRouter);
   app.use("/promotion", promotionRouter);
   app.use("/api/kho", khoRouter);
+  app.use("/wishlist", wishlistRoutes);
 };

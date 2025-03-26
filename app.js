@@ -224,6 +224,6 @@ socket.on('sendMessage', (data) => {
 });
 
 // Lắng nghe server trên cổng 5000
-server.listen(5000, () => {
+server.listen(5001, () => {
   console.log("Server đang chạy trên cổng 5000...");
 });
